@@ -66,9 +66,7 @@ Write-up date: 2026-08-25
    - Genart early review of -00 by Russ Housley
    - Secdir early review of -00 by Scott G. Kelly
 
-   Shepherd review comments and the HTTPDir follow-ups (including media type
-   registration, RFC 9110 citations, 202 "accepting" wording, RFC 9457 problem
-   details for request-level failures, and clarification of error handling) were
+   Shepherd review comments and the HTTPDir follow-ups were
    addressed in subsequent revisions culminating in -03.
 
    Externally, the work is relevant to the OpenID Foundation Shared Signals
@@ -77,9 +75,8 @@ Write-up date: 2026-08-25
 2. Describe how the document meets any required formal expert review criteria,
    such as the MIB Doctor, YANG Doctor, media type, and URI type reviews.
 
-   The document registers the media type application/secevents+json. Media-type
-   expert review is expected as part of IANA processing during IETF Last Call /
-   IESG Evaluation. No MIB, YANG, or URI registrations are present.
+   The document registers the media type application/secevents+json.
+   No MIB, YANG, or URI registrations are present.
 
 3. If the document contains a YANG module, has the final version of the module
    been checked with any of the recommended validation tools for syntax and
@@ -105,9 +102,8 @@ Write-up date: 2026-08-25
 
    Yes. The document fills a practical gap relative to RFC 8935 by defining
    efficient batched push delivery of multiple SETs in a single HTTP request,
-   with clear acknowledgement and error semantics. After shepherd review and
-   incorporation of early directorate feedback through -03, the shepherd
-   considers the document ready for AD hand-off / further IETF process.
+   with clear acknowledgement and error semantics. At this point I consider
+   the document ready for AD hand-off.
 
 2. Several IETF Areas have assembled lists of common issues that their
    reviewers encounter. For which areas have such issues been identified
@@ -115,10 +111,8 @@ Write-up date: 2026-08-25
    reviews?
 
    Security Area and HTTP-related issues were substantially addressed via Secdir,
-   HTTPDir, Genart early reviews, AD feedback, and shepherd review (including
-   TLS reference update to RFC 9846, request-size limits, disclosure guidance in
-   setErrs, Recipient terminology consistency, and HTTP semantics alignment with
-   RFC 9110 / RFC 9457). Further review during IETF Last Call remains appropriate.
+   HTTPDir, Genart early reviews, AD feedback, and shepherd review. I am not
+   aware of any additional targetted review required before publication.
 
 3. What type of RFC publication is being requested on the IETF stream (Best
    Current Practice, Proposed Standard, Internet Standard,
@@ -151,16 +145,26 @@ Write-up date: 2026-08-25
    authors.ietf.org. (Also note that the current idnits tool generates
    some incorrect warnings; a rewrite is underway.)
 
-   No significant remaining nits identified by the shepherd after -03. Minor
-   editorial polish may still arise in RFC Editor processing. The About This
-   Document note still points at the historical Security Events WG mailing list;
-   that is expected to be removed before publication.
+   The shepherd ran idnits 2.17.1 (via author-tools.ietf.org) against -03 and
+   reviewed the Content Guidelines overview at
+   https://authors.ietf.org/en/content-guidelines-overview (and related
+   required/recommended content pages). Boilerplate and checklist checks were
+   clean. One idnits warning remains:
+
+   - Unused normative reference: RFC 9728 (OAuth 2.0 Protected Resource
+     Metadata) is listed but not cited in the body. Authors should either cite
+     it where resource metadata is intended, or remove it from the references.
+
+   The About This Document note still points at the historical Security Events
+   WG mailing list; that note is expected to be removed before publication.
+   No other significant content-guideline issues were identified.
 
 7. Should any informative references be normative or vice-versa? See the IESG
    Statement on Normative and Informative References.
 
-   No issues identified. Normative references to RFC 8417, RFC 8935, RFC 9110,
-   RFC 9457, RFC 9846, RFC 8259, RFC 2277, RFC 6838, and RFC 9728 are appropriate.
+   Aside from the unused RFC 9728 noted above (which should be cited or
+   dropped), the remaining normative references (RFC 8417, RFC 8935, RFC 9110,
+   RFC 9457, RFC 9846, RFC 8259, RFC 2277, and RFC 6838) are appropriate.
 
 8. List any normative references that are not freely available to anyone. Did
    the community have sufficient access to review any such normative
