@@ -112,7 +112,7 @@ Write-up date: 2026-08-25
 
    Security Area and HTTP-related issues were substantially addressed via Secdir,
    HTTPDir, Genart early reviews, AD feedback, and shepherd review. I am not
-   aware of any additional targetted review required before publication.
+   aware of any additional targeted review required before publication.
 
 3. What type of RFC publication is being requested on the IETF stream (Best
    Current Practice, Proposed Standard, Internet Standard,
@@ -163,8 +163,7 @@ Write-up date: 2026-08-25
    Statement on Normative and Informative References.
 
    Aside from the unused RFC 9728 noted above (which should be cited or
-   dropped), the remaining normative references (RFC 8417, RFC 8935, RFC 9110,
-   RFC 9457, RFC 9846, RFC 8259, RFC 2277, and RFC 6838) are appropriate.
+   dropped), the remaining normative references are appropriate.
 
 8. List any normative references that are not freely available to anyone. Did
    the community have sufficient access to review any such normative
